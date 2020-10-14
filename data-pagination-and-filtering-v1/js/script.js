@@ -17,7 +17,29 @@ For assistance:
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
+function showPage(list, page) {
+   // create two variables which will represent the index for the first and last student on the page
+ let firstStudent = (page * 9) - 9
+ let lastStudent = (page * 9)
+   // select the element with a class of `student-list` and assign it to a variable
+ const studentList = document.querySelectorAll('student-list')
+   // set the innerHTML property of the variable you just created to an empty string
+ studentList.innerHTML = ''
+   // loop over the length of the `list` parameter
+   for (let i = 0; i < list.length; i++){
+      if (firstStudent <= i && i < lastStudent) {
+         name[i]
 
+      }
+       
+   }
+
+   showPage(data, 9)
+     // inside the loop create a conditional to display the proper students
+       // inside the conditional:
+         // create the elements needed to display the student information
+         // insert the above elements
+ }
 
 
 /*
@@ -28,3 +50,32 @@ This function will create and insert/append the elements needed for the paginati
 
 
 // Call functions
+
+
+/*
+Code that I'm not sure will work as i want it to 
+*/
+
+// const li = document.createElement("LI")
+// const div = document.createElement("DIV")
+// const img = document.createElement("IMG")
+// const h3 = document.createElement("H3")
+// const span = document.createElement ("SPAN")
+// const div2 = document.createElement ("DIV")
+// const span2 = document.createElement ("SPAN")
+
+// li.className = "student-item cf"
+// div.className = "student-details"
+// img.className = "avatar"
+// span.className = "email"
+// div2.className = "joined-details"
+// span.className = "date"
+
+// document.body.appendChild(li)
+// li.appendChild(div)
+// div.appendChild(img)
+// div.appendChild(h3)
+// div.appendChild(span)
+// li.appendChild(div2)
+// div2.appendChild(span2)
+// }
