@@ -22,7 +22,7 @@ function showPage(list, page) {
  let firstStudent = (page * 9) - 9
  let lastStudent = (page * 9)
    // select the element with a class of `student-list` and assign it to a variable
- let studentList = document.querySelectorAll('student-list')
+ let studentList = document.querySelector('.student-list')
    // set the innerHTML property of the variable you just created to an empty string
  studentList.innerHTML = ''
    // loop over the length of the `list` parameter
@@ -41,17 +41,24 @@ function showPage(list, page) {
          img.className = "avatar"
          span.className = "email"
          div2.className = "joined-details"
-         span.className = "date"
+         span2.className = "date"
 
-         document.body.appendChild(li)
+         h3.textContent = `${data[i].name.first} ${data[i].name.last}`
+         span.textContent = `${data[i].email}`
+         img.src = `${data[i].picture.large}`
+         span2.textContent = `${data[i].registered.date}`
+
+         studentList.appendChild(li)
          li.appendChild(div)
          div.appendChild(img)
          div.appendChild(h3)
          div.appendChild(span)
          li.appendChild(div2)
          div2.appendChild(span2)
+
+         // studentList.insertAdjacentHTML('beforeend',  )
          }
-         studentList = list[i]
+         
       }
        
    }
