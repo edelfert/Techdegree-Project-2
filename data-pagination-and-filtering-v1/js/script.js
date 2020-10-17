@@ -91,9 +91,10 @@ function addPagination (list) {
     li.appendChild(buttonElement);
 
     //click event to change data on number clicked
-    elementUl.addEventListener('click', (e) => { 
+    buttonElement.addEventListener('click', (e) => { 
       
-      buttonElement.className = "";
+      const buttons = document.querySelector(".active") 
+      buttons.className = ""
       const target = e.target;
 
       target.className = "active";
